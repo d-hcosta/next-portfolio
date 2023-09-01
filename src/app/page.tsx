@@ -1,6 +1,4 @@
-import { Navbar } from "@/components"
-import { AsideLeft } from "@/components/AsideLeft/AsideLeft"
-import { AsideRight } from "@/components/AsideRight"
+import { About, AsideLeft, AsideRight, HeroSection, Navbar } from "@/components"
 
 export default function Home() {
   return (
@@ -8,15 +6,14 @@ export default function Home() {
       <Navbar />
 
       <div className="h-[88vh] w-full items-center justify-between gap-20 xl:flex">
-        <div className="fixed bottom-0 left-0 hidden h-full w-32 xl:inline-flex">
-          <AsideLeft />
+        <AsideLeft />
+
+        <div className="mx-auto h-[88vh] w-full p-4">
+          <HeroSection />
+          <About />
         </div>
 
-        <div className="mx-auto h-[88vh] p-4">MIddle</div>
-
-        <div className="fixed bottom-0 right-0 hidden h-full w-32 xl:inline-flex">
-          <AsideRight />
-        </div>
+        <AsideRight />
       </div>
     </main>
   )
