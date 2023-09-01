@@ -1,1 +1,5 @@
-export * from './Navbar'
+export * from "./AsideLeft"
+export * from "./AsideRight"
+export * from "./HeroSection"
+export * from "./Navbar"
+export * from "./About"
