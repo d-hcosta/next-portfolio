@@ -65,6 +65,20 @@ export function About() {
             </li>
           </ul>
         </div>
+
+        <div className="group relative h-80 w-full lgl:w-1/3">
+          <div className="absolute -left-6 -top-6 h-80 w-full rounded-lg">
+            <div className="relative z-20 flex h-full w-full pl-6 lgl:pl-0">
+              <Image
+                className="h-full rounded-lg object-cover"
+                src={characterAbout}
+                alt="characterAbout"
+              />
+              <div className="absolute left-0 top-0 hidden h-80 w-full rounded-md bg-textGreen/5 duration-300 group-hover:bg-transparent lgl:inline-block"></div>
+            </div>
+          </div>
+          <div className="hidden h-80 w-full rounded-md border-2 border-textGreen transition-transform duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 lgl:inline-flex"></div>
+        </div>
       </div>
     </section>
   )
