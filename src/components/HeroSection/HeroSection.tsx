@@ -4,7 +4,10 @@ import { motion } from "framer-motion"
 
 export function HeroSection() {
   return (
-    <section className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:py-24 lgl:gap-8 xl:px-4 ">
+    <section
+      id="home"
+      className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:py-24 lgl:gap-8 xl:px-4 "
+    >
       <motion.h3
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -41,7 +44,6 @@ export function HeroSection() {
 
       <motion.button
         initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.9 }}
         className="h-14 w-52 rounded-md border border-textGreen font-titleFont text-sm tracking-wide text-textGreen duration-300 hover:bg-hoverColor"
       >
