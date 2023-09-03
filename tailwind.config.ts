@@ -29,7 +29,7 @@ const config: Config = {
         titleFont: ["Inter", "sans-serif"],
       },
       colors: {
-        bodyColor: "#0A192F",
+        bodyColor: "#141a1f",
         textGreen: "#64ffda",
         textLight: "#ccd6f6",
         textDark: "#8892b0",
@@ -37,6 +37,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 }
 export default config
