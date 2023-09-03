@@ -1,4 +1,13 @@
-import { About, AsideLeft, AsideRight, HeroSection, Navbar } from "@/components"
+import {
+  About,
+  AsideLeft,
+  AsideRight,
+  HeroSection,
+  Navbar,
+  Experience,
+  Projects,
+  Contact,
+} from "@/components"
 
 export default function Home() {
   return (
@@ -11,6 +20,9 @@ export default function Home() {
         <div className="mx-auto h-[88vh] w-full p-4">
           <HeroSection />
           <About />
+          <Experience />
+          <Projects />
+          <Contact />
         </div>
 
         <AsideRight />
