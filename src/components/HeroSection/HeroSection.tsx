@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Particles } from "./Particles"
 
 export function HeroSection() {
   return (
@@ -8,22 +9,20 @@ export function HeroSection() {
       id="home"
       className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:py-24 lgl:gap-8 xl:px-4 "
     >
-      <motion.h3
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="font-titleFont text-lg tracking-wide text-textGreen"
-      >
-        Hi, my name is
-      </motion.h3>
-
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="flex flex-col font-titleFont text-4xl font-semibold lgl:text-6xl"
+        className="flex flex-col font-titleFont lgl:text-6xl"
       >
-        Diego Costa. <span className="mt-2 text-textDark lgl:mt-4">I'm a Fullstack Developer.</span>
+        <span className="text-8xl font-extrabold">
+          Hey, i'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
+        </span>
+
+        <span className="mt-2 text-5xl font-medium text-textDark lgl:mt-4">
+          I'm a{" "}
+          <span className="mt-2 font-semibold text-textGreen lgl:mt-4"> Software Developer</span>
+        </span>
       </motion.h1>
 
       <motion.p
@@ -32,9 +31,8 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base font-medium text-textDark md:max-w-[650px]"
       >
-        I am a <span className="text-textGreen">Software Developer</span>, boasting more than{" "}
-        <span className="text-textGreen">four years</span> of professional experience. My expertise
-        spans both <span className="text-textGreen">front-end</span> and{" "}
+        I've spent the last 4 years building and scaling software for some pretty cool companies. My
+        expertise spans both <span className="text-textGreen">front-end</span> and{" "}
         <span className="text-textGreen">back-end</span> development, underpinned by a robust
         foundation. Presently, I am immersing myself in the realm of{" "}
         <span className="text-textGreen">Python</span> and{" "}
