@@ -25,10 +25,10 @@ export function Navbar() {
     const links = document.querySelectorAll(".nav-link")
 
     links.forEach((link) => {
-      link.classList.remove("active")
+      link.classList.remove("text-textGreen")
     })
 
-    event.currentTarget.classList.add("active")
+    event.currentTarget.classList.add("text-textGreen")
   }
 
   function handleMobileMenu() {
@@ -36,7 +36,7 @@ export function Navbar() {
   }
 
   return (
-    <div className="shadow-navbarShadow sticky top-0 z-50 h-20 w-full bg-bodyColor px-4 lg:h-[12vh]">
+    <div className="shadow-navbarShadow shadow-navbarBlur sticky top-0 z-50 h-20 w-full px-4 lg:h-[12vh]">
       <div className="mx-auto flex h-full max-w-container items-center justify-between py-1 font-titleFont">
         <div>{/* <Image className="w-14" src={} /> */}</div>
 
@@ -44,7 +44,7 @@ export function Navbar() {
           <ul className="flex gap-7 text-[13px]">
             <Link
               href="#home"
-              className="nav-link active flex cursor-pointer items-center gap-1 font-medium text-textDark duration-300 hover:text-textGreen"
+              className="nav-link flex cursor-pointer items-center gap-1 font-medium text-textGreen duration-300 hover:text-textGreen"
               onClick={handleScroll}
             >
               <motion.li
@@ -103,7 +103,7 @@ export function Navbar() {
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.25 }}
               className="rounded-md border border-textGreen px-4 py-2 text-[13px] text-textGreen duration-300 hover:bg-hoverColor"
             >
               Resume
