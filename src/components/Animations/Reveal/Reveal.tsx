@@ -12,7 +12,7 @@ export function Reveal({ children, width = "fit-content" }: RevealProps) {
       mainControls.start("visible")
       slideControls.start("visible")
     }
-  })
+  }, [isInView, mainControls, slideControls])
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
@@ -20,15 +20,15 @@ export function Reveal({ children, width = "fit-content" }: RevealProps) {
         variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.75, delay: 0.55 }}
       >
         {children}
       </motion.div>
 
       <motion.div
         variants={{
-          hidden: { left: 0 },
-          visible: { left: "100%" },
+          hidden: { left: 0, opacity: 0 },
+          visible: { left: "100%", opacity: 1 },
         }}
         initial="hidden"
         animate={slideControls}
