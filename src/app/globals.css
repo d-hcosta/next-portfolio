@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbarBlur {
+  backdrop-filter: blur(25px);
+}
