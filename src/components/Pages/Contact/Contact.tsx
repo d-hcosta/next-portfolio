@@ -8,7 +8,7 @@ export function Contact() {
         04. What's next?
       </p>
 
-      <h2 className="font-titleFont text-5xl font-semibold">Get In Touch</h2>
+      <h1 className="font-titleFont text-7xl font-black">Contact</h1>
     </section>
   )
 }
