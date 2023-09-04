@@ -22,9 +22,6 @@ export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) 
           </button>
 
           <motion.div
-            initial={{ scale: 0, rotate: "12.5deg" }}
-            animate={{ scale: 1, rotate: "0deg" }}
-            exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
             className="relative w-full max-w-3xl cursor-default overflow-hidden rounded-lg bg-[#232323] p-6 text-white shadow-xl"
           >
