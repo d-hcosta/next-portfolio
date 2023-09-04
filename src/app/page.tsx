@@ -9,7 +9,6 @@ import {
   HeroSection,
   Navbar,
   Projects,
-  WaterDropGrid,
 } from "@/components"
 
 export default function Home() {
