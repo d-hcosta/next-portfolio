@@ -28,6 +28,7 @@ const config: Config = {
         bodyFont: ["Montserrat", "sans-serif"],
         titleFont: ["Inter", "sans-serif"],
       },
+      boxShadow: { navbarShadow: "0 10px 30px -10px rgba(0, 1, 1, 0.3)" },
       colors: {
         bodyColor: "#111111",
         textGreen: "#0aff9d",
