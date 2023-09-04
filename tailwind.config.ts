@@ -26,9 +26,12 @@ const config: Config = {
       },
       fontFamily: {
         bodyFont: ["Montserrat", "sans-serif"],
-        titleFont: ["Inter", "sans-serif"],
+        titleFont: ["Poppins", "sans-serif"],
       },
-      boxShadow: { navbarShadow: "0 10px 30px -10px rgba(0, 1, 1, 0.3)" },
+      boxShadow: {
+        navbarShadow: "0 10px 30px -10px rgba(0, 1, 1, 0.3)",
+        navbarBlur: "backdrop-filter: blur(12px)",
+      },
       colors: {
         bodyColor: "#111111",
         textGreen: "#0aff9d",
