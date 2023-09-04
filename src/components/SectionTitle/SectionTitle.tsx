@@ -19,9 +19,9 @@ export function SectionTitle({ number, title }: SectionTitleProps) {
       initial="hidden"
       animate={titleControl}
       transition={{ duration: 0.5, delay: 0.25 }}
-      className="flex items-center font-titleFont text-2xl font-semibold"
+      className="flex items-center font-titleFont text-3xl font-semibold"
     >
-      <span className="mr-2 text-base text-textGreen md:text-lg">{number}.</span>
+      <span className="mr-2 text-2xl text-textGreen md:text-lg">{number}.</span>
       {title}
       <span className="ml-6 h-px w-full bg-gray-500 bg-opacity-40 md:inline-flex md:w-60 lgl:w-72"></span>
     </motion.h2>
