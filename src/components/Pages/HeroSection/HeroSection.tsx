@@ -1,3 +1,4 @@
+import { WaterDropGrid } from "@/components"
 import { motion } from "framer-motion"
 import Typewriter from "typewriter-effect"
 
@@ -11,9 +12,9 @@ export function HeroSection() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.25 }}
-        className="flex flex-col font-titleFont lgl:text-6xl"
+        className="z-10 flex flex-col font-titleFont lgl:text-6xl"
       >
-        <span className="text-8xl font-extrabold">
+        <span className="z-10 text-8xl font-extrabold">
           Hey, i'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
         </span>
 
@@ -53,6 +54,8 @@ export function HeroSection() {
       >
         Check out my Projects!
       </motion.button>
+
+      <WaterDropGrid />
     </section>
   )
 }

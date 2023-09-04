@@ -1,76 +1,67 @@
-import { useCallback } from "react"
-import { Particles as ReactTsParticles } from "react-tsparticles"
-import { Engine } from "tsparticles-engine"
-import { loadFull } from "tsparticles"
+import anime from "animejs"
 
-export function BackgroundParticles() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
-  }, [])
+export const WaterDropGrid = () => {
+  return (
+    <div className="absolute bottom-8 right-96 top-0 z-0 grid place-content-center px-8 py-12">
+      <DotGrid />
+    </div>
+  )
+}
 
-  const particlesLoaded = useCallback(async () => {}, [])
+const GRID_WIDTH = 25
+const GRID_HEIGHT = 20
+
+const DotGrid = () => {
+  const handleDotClick = (e) => {
+    anime({
+      targets: ".dot-point",
+      scale: [
+        { value: 1.35, easing: "easeOutSine", duration: 250 },
+        { value: 1, easing: "easeInOutQuad", duration: 500 },
+      ],
+      translateY: [
+        { value: -15, easing: "easeOutSine", duration: 250 },
+        { value: 0, easing: "easeInOutQuad", duration: 500 },
+      ],
+      opacity: [
+        { value: 1, easing: "easeOutSine", duration: 250 },
+        { value: 0.5, easing: "easeInOutQuad", duration: 500 },
+      ],
+      delay: anime.stagger(100, {
+        grid: [GRID_WIDTH, GRID_HEIGHT],
+        from: e.target.dataset.index,
+      }),
+    })
+  }
+
+  const dots = []
+  let index = 0
+
+  for (let i = 0; i < GRID_WIDTH; i++) {
+    for (let j = 0; j < GRID_HEIGHT; j++) {
+      dots.push(
+        <div
+          className="group cursor-crosshair rounded-full p-2 transition-colors hover:bg-slate-600"
+          data-index={index}
+          key={`${i}-${j}`}
+        >
+          <div
+            className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-slate-700 to-slate-400 opacity-50 group-hover:from-indigo-600 group-hover:to-white"
+            data-index={index}
+          />
+        </div>
+      )
+      index++
+    }
+  }
 
   return (
-    <ReactTsParticles
-      id="tsparticles"
-      className="absolute left-0 top-0 h-full w-full opacity-60"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        fullScreen: { enable: false },
-        background: { color: { value: "" } },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onclick: {
-              enable: false,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-            resize: true,
-          },
-          modes: {
-            push: { quantity: 90 },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: { value: "#078816" },
-          links: {
-            color: "#a3f593",
-            distance: 150,
-            enable: true,
-            opacity: 0.3,
-            width: 1,
-          },
-          collisions: { enable: true },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: { default: "bounce" },
-            random: false,
-            speed: 1,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: { value: 0.5 },
-          shape: { type: "circle" },
-          size: { value: { min: 1, max: 5 } },
-        },
-        detectRetina: true,
-      }}
-    />
+    <div
+      onClick={handleDotClick}
+      style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
+      className="grid w-fit"
+    >
+      {dots}
+    </div>
   )
 }

@@ -1,1 +1,1 @@
-export { BackgroundParticles } from "./BackgroundParticles"
+export { WaterDropGrid } from "./BackgroundParticles"
