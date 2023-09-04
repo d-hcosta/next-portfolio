@@ -25,18 +25,15 @@ const config: Config = {
         xl: "1280px",
       },
       fontFamily: {
-        bodyFont: ["Montserrat", "sans-serif"],
+        bodyFont: ["Inter", "sans-serif"],
         titleFont: ["Poppins", "sans-serif"],
       },
-      boxShadow: {
-        navbarShadow: "0 10px 30px -10px rgba(0, 1, 1, 0.3)",
-        navbarBlur: "backdrop-filter: blur(12px)",
-      },
+      boxShadow: { navbarShadow: "0 10px 30px -10px rgba(0, 1, 1, 0.3)" },
       colors: {
         bodyColor: "#111111",
         textGreen: "#0aff9d",
         textLight: "#ebecf3",
-        textDark: "#8892b0",
+        textDark: "#a0a0a5",
         hoverColor: "rgba(100, 255, 218, 0.1)",
       },
     },
