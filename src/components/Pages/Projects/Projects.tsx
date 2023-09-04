@@ -1,7 +1,8 @@
 import Image from "next/image"
-import { SectionTitle } from "../SectionTitle"
+
 import { eloRocket, pomodoro, portfolioV1 } from "@/assets"
 import { RxOpenInNewWindow } from "react-icons/rx"
+import { SectionTitle } from "@/components/SectionTitle"
 
 export function Projects() {
   return (

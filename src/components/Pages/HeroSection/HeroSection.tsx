@@ -1,7 +1,4 @@
-"use client"
-
 import { motion } from "framer-motion"
-import { Particles } from "./Particles"
 
 export function HeroSection() {
   return (

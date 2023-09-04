@@ -4,13 +4,12 @@ import {
   About,
   AsideLeft,
   AsideRight,
+  Contact,
+  Experience,
   HeroSection,
   Navbar,
-  Experience,
   Projects,
-  Contact,
 } from "@/components"
-import { Particles } from "@/components/HeroSection/Particles"
 
 export default function Home() {
   return (

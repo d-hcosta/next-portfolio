@@ -1,7 +1,8 @@
 import Image from "next/image"
-import { SectionTitle } from "../SectionTitle"
+
 import { characterAbout } from "@/assets"
 import { AiFillThunderbolt } from "react-icons/ai"
+import { SectionTitle } from "@/components/SectionTitle"
 
 export function About() {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { SectionTitle } from "../SectionTitle"
+import { SectionTitle } from "@/components/SectionTitle"
 import { EloRocket, Freelancer, SignoWeb } from "./Summary"
 
 export function Experience() {
