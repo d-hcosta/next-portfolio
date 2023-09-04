@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Typewriter from "typewriter-effect"
 
 export function HeroSection() {
   return (
@@ -16,9 +17,17 @@ export function HeroSection() {
           Hey, i'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
         </span>
 
-        <span className="mt-2 text-5xl font-medium text-textLight/80 lgl:mt-4">
-          I'm a{" "}
-          <span className="mt-2 font-semibold text-textGreen lgl:mt-4">Software Developer</span>
+        <span className="mt-2 inline-flex items-center gap-3 text-5xl font-medium text-textLight/80 lgl:mt-4">
+          <p>I'm a</p>
+          <span className="font-semibold text-textGreen">
+            <Typewriter
+              options={{
+                strings: ["Software Developer", "Fullstack Developer", "Cyber Security Student"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
         </span>
       </motion.h1>
 
