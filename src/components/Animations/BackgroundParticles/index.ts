@@ -1,1 +1,0 @@
-export { WaterDropGrid } from "./BackgroundParticles"
