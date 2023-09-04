@@ -1,8 +1,10 @@
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 import { characterAbout } from "@/assets"
 import { AiFillThunderbolt } from "react-icons/ai"
 import { SectionTitle } from "@/components/SectionTitle"
+import { Reveal } from "@/components"
 
 export function About() {
   return (
@@ -14,13 +16,17 @@ export function About() {
 
       <div className="flex flex-col gap-16 lgl:flex-row">
         <div className="flex w-full flex-col gap-4 text-base font-medium text-textDark lgl:w-2/3">
-          <p>
-            I'm a curious and competent full-stack software developer. I see myself as an eternal
-            learner, motivated to solve complex problems. Programming for me is a way to find peace
-            in the midst of chaos.
-          </p>
+          <Reveal>
+            <p>
+              I'm a curious and competent full-stack software developer. I see myself as an eternal
+              learner, motivated to solve complex problems. Programming for me is a way to find
+              peace in the midst of chaos.
+            </p>
+          </Reveal>
 
-          <p>Here are a few technologies i work:</p>
+          <Reveal>
+            <p>Here are a few technologies i work:</p>
+          </Reveal>
 
           <ul className="mt-6 grid max-w-[450px] grid-cols-2 gap-2 font-titleFont text-sm">
             <li className="flex-items flex gap-2">
@@ -67,7 +73,12 @@ export function About() {
           </ul>
         </div>
 
-        <div className="group relative h-80 w-full lgl:w-1/3">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="group relative h-80 w-full lgl:w-1/3"
+        >
           <div className="absolute -left-6 -top-6 h-80 w-full rounded-lg">
             <div className="relative z-20 flex h-full w-full pl-6 lgl:pl-0">
               <Image
@@ -79,7 +90,7 @@ export function About() {
             </div>
           </div>
           <div className="hidden h-80 w-full rounded-md border-2 border-textGreen transition-transform duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 lgl:inline-flex"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
