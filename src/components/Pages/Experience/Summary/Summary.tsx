@@ -4,13 +4,30 @@ import { useRef, useEffect } from "react"
 import { TiArrowForward } from "react-icons/ti"
 
 function SummaryDescriptionLi({ description }: SummaryDescriptionProp) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const arrowControl = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      arrowControl.start("visible")
+    }
+  }, [isInView, arrowControl])
+
   return (
-    <li className="flex gap-2 text-base text-textDark">
+    <motion.li
+      ref={ref}
+      variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
+      initial="hidden"
+      animate={arrowControl}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      className="flex gap-2 text-base text-textDark"
+    >
       <span className="mt-l text-textGreen">
         <TiArrowForward />
       </span>
       <Reveal>{description}</Reveal>
-    </li>
+    </motion.li>
   )
 }
 
