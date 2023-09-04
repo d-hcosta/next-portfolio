@@ -9,7 +9,7 @@ export function AsideLeft() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.5 }}
+      transition={{ delay: 0.5 }}
       className="fixed bottom-0 left-0 hidden h-full w-32 xl:inline-flex"
     >
       <div className="flex h-full w-full flex-col items-center justify-end gap-4 text-textLight">

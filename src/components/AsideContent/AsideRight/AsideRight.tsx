@@ -5,7 +5,7 @@ export function AsideRight() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.5 }}
+      transition={{ delay: 0.5 }}
       className="fixed bottom-0 right-0 hidden h-full w-32 xl:inline-flex"
     >
       <div className="flex h-full w-full flex-col items-center justify-end gap-6 text-textLight">
