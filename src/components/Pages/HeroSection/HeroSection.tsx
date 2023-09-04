@@ -1,4 +1,3 @@
-import { WaterDropGrid } from "@/components"
 import { motion } from "framer-motion"
 import Typewriter from "typewriter-effect"
 
@@ -6,7 +5,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:py-24 lgl:gap-8 xl:px-4 "
+      className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:pt-56 lgl:gap-8 xl:px-4 "
     >
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
@@ -39,12 +38,12 @@ export function HeroSection() {
         className="text-base font-medium text-textDark md:max-w-[650px]"
       >
         I've spent the last 4 years building and scaling software for some pretty cool companies. My
-        expertise spans both <span className="font-semibold text-textGreen">front-end</span> and{" "}
-        <span className="font-semibold text-textGreen">back-end</span> development, underpinned by a
-        robust foundation. Presently, I am immersing myself in the realm of{" "}
-        <span className="font-semibold text-textGreen">Python</span> and{" "}
-        <span className="font-semibold text-textGreen">Ruby</span> programming languages, further
-        enriching my skill set.
+        expertise spans both <span className="text-textGreen">front-end</span> and{" "}
+        <span className="text-textGreen">back-end</span> development, underpinned by a robust
+        foundation. Presently, I am immersing myself in the realm of{" "}
+        <span className="text-textGreen">Python</span> and{" "}
+        <span className="text-textGreen">Ruby</span> programming languages, further enriching my
+        skill set.
       </motion.p>
 
       <motion.button
@@ -54,8 +53,6 @@ export function HeroSection() {
       >
         Check out my Projects!
       </motion.button>
-
-      <WaterDropGrid />
     </section>
   )
 }
