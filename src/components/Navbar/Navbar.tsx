@@ -32,7 +32,7 @@ export function Navbar() {
   }
 
   return (
-    <div className="navbarBlur shadow-NavbarShadow fixed left-6 right-6 top-6 z-50 mx-auto flex w-[calc(400px+2rem)] items-center justify-center rounded-xl bg-bodyColor/60 sm:left-0 sm:w-full sm:items-end sm:justify-end sm:pr-5 lg:h-[8vh]">
+    <div className="navbarBlur shadow-NavbarShadow fixed left-6 right-6 top-6 z-50 mx-auto flex w-[calc(400px+2rem)] items-center justify-center rounded-xl bg-bodyColor/60 sm:pr-5 lg:h-[8vh]">
       <div className="flex h-full max-w-container items-center justify-between py-1 font-titleFont">
         <div className="hidden items-center gap-7 mdl:inline-flex">
           <ul className="flex gap-7 text-[13px]">
