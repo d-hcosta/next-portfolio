@@ -32,7 +32,7 @@ export function Reveal({ children, width = "fit-content" }: RevealProps) {
         }}
         initial="hidden"
         animate={slideControls}
-        transition={{ duration: 0.5, easy: "easeIn" }}
+        transition={{ duration: 0.5, easy: "easeIn", delay: 0.55 }}
         style={{
           position: "absolute",
           top: 4,
