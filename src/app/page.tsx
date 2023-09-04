@@ -1,3 +1,5 @@
+"use client"
+
 import {
   About,
   AsideLeft,
@@ -8,10 +10,11 @@ import {
   Projects,
   Contact,
 } from "@/components"
+import { Particles } from "@/components/HeroSection/Particles"
 
 export default function Home() {
   return (
-    <main className="scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/60 h-screen w-full  overflow-x-hidden overflow-y-scroll bg-bodyColor font-bodyFont text-textLight">
+    <main className="h-screen w-full overflow-x-hidden overflow-y-scroll bg-bodyColor  font-bodyFont text-textLight scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/60">
       <Navbar />
 
       <div className="h-[88vh] w-full items-center justify-between gap-20 xl:flex">
@@ -27,6 +30,8 @@ export default function Home() {
 
         <AsideRight />
       </div>
+
+      {/* <Particles /> */}
     </main>
   )
 }
