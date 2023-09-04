@@ -1,20 +1,14 @@
-"use client"
-
 import { useState } from "react"
 import { SectionTitle } from "@/components/SectionTitle"
-import { EloRocket, Freelancer, SignoWeb } from "./Summary"
+import { Reveal } from "@/components"
+import { ExperiencesConstants } from "@/constants"
+import { Summary } from "./Summary"
 
 export function Experience() {
-  const [selectedSummary, setSelectedSummary] = useState<SummaryName>("SignoWeb")
+  const [selectedSummary, setSelectedSummary] = useState("SignoWeb")
 
-  const summaries: Record<SummaryName, JSX.Element> = {
-    SignoWeb: <SignoWeb />,
-    EloRocket: <EloRocket />,
-    Freelancer: <Freelancer />,
-  }
-
-  const handleSummaryClick = (summary: SummaryName) => {
-    setSelectedSummary(summary)
+  const handleSummaryClick = (name: string) => {
+    setSelectedSummary(name)
   }
 
   return (
@@ -23,22 +17,42 @@ export function Experience() {
 
       <div className="mt-10 flex w-full flex-col gap-16 md:flex-row">
         <ul className="flex flex-col md:w-32">
-          {Object.keys(summaries).map((summaryName) => (
-            <li
-              key={summaryName}
-              onClick={() => handleSummaryClick(summaryName as SummaryName)}
-              className={`${
-                selectedSummary === summaryName
-                  ? "border-l-textGreen text-textGreen"
-                  : "border-l-hoverColor text-textDark"
-              } cursor-pointer border-l-2  bg-transparent px-8 py-3 text-sm font-medium  duration-300 hover:bg-[#112240]`}
-            >
-              {summaryName}
-            </li>
+          {ExperiencesConstants.map((experience, index) => (
+            <Reveal key={`experience-${index}`}>
+              <li
+                onClick={() => handleSummaryClick(experience.name)}
+                className={`${
+                  selectedSummary === experience.name
+                    ? "border-l-textGreen text-textGreen"
+                    : "border-l-hoverColor text-textDark"
+                } cursor-pointer border-l-2  bg-transparent px-8 py-3 text-sm font-medium  duration-300 hover:bg-[#112240]`}
+              >
+                {experience.name}
+              </li>
+            </Reveal>
           ))}
         </ul>
 
-        {summaries[selectedSummary]}
+        {selectedSummary && (
+          <Summary
+            projectUrl={
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.projectUrl || ""
+            }
+            projectName={
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.projectName || ""
+            }
+            periodInTheProject={
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.periodInTheProject || ""
+            }
+            arrayOfDescriptions={
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.arrayOfDescriptions ||
+              []
+            }
+            positionHeld={
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.positionHeld || ""
+            }
+          />
+        )}
       </div>
     </section>
   )
