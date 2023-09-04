@@ -29,9 +29,9 @@ const config: Config = {
         titleFont: ["Inter", "sans-serif"],
       },
       colors: {
-        bodyColor: "#141a1f",
-        textGreen: "#64ffda",
-        textLight: "#ccd6f6",
+        bodyColor: "#111111",
+        textGreen: "#0aff9d",
+        textLight: "#ebecf3",
         textDark: "#8892b0",
         hoverColor: "rgba(100, 255, 218, 0.1)",
       },
