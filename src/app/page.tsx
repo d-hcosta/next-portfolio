@@ -4,6 +4,7 @@ import {
   About,
   AsideLeft,
   AsideRight,
+  BackgroundParticles,
   Contact,
   Experience,
   HeroSection,
@@ -30,7 +31,7 @@ export default function Home() {
         <AsideRight />
       </div>
 
-      {/* <Particles /> */}
+      {/* <BackgroundParticles /> */}
     </main>
   )
 }
