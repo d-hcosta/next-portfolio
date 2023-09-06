@@ -30,11 +30,11 @@ export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) 
             <div className="py-4">
               <h3 className="font-titleFont text-2xl font-semibold">{project?.name}</h3>
 
-              <div className="mt-2 flex flex-wrap gap-5 font-bodyFont text-base text-textGreen">
+              <div className="mt-2 flex flex-wrap gap-5 font-bodyFont text-base font-semibold text-textGreen">
                 {project?.techArray.join(", ")}
               </div>
 
-              <div className="mt-3 flex flex-col gap-7">
+              <div className="mt-3 flex flex-col gap-7 tracking-wide">
                 {project?.completeDescription &&
                   project?.completeDescription.map((desc, i) => <p key={`desc-${i}`}>{desc}</p>)}
               </div>

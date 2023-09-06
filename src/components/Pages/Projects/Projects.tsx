@@ -18,7 +18,7 @@ export function Projects() {
       <SectionTitle number="03" title="Some things I built" />
 
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-28">
-        <div className="mt-10 flex w-full flex-col items-center justify-between gap-28">
+        <div className="mt-10 flex w-full flex-col items-center justify-between gap-28 tracking-wide">
           {ProjectsConstants.map((project, index) => (
             <FeaturedProject
               key={`project-${index}`}

@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="mx-auto flex max-w-contentContainer flex-col gap-4 py-10 mdl:px-10 mdl:pt-56 lgl:gap-8 xl:px-4 "
+      className="mx-auto flex max-w-contentContainer flex-col items-center gap-4 py-10 mdl:px-10 mdl:pt-56 lgl:gap-8 xl:px-4 "
     >
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
@@ -14,28 +14,30 @@ export function HeroSection() {
         className="z-10 flex flex-col font-titleFont lgl:text-6xl"
       >
         <span className="z-10 text-8xl font-extrabold">
-          Hey, i'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
+          Hey, I'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
         </span>
 
-        <span className="mt-2 inline-flex items-center gap-3 text-5xl font-medium text-textLight/80 lgl:mt-4">
-          <p>I'm a</p>
-          <span className="font-semibold text-textGreen">
-            <Typewriter
-              options={{
-                strings: ["Software Developer", "Fullstack Developer", "Cyber Security Student"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+        <div className="flex items-center justify-center">
+          <span className="mt-2 inline-flex items-center gap-3 text-4xl font-medium text-textLight/80 lgl:mt-4">
+            <p>I'm a</p>
+            <span className="font-semibold text-textGreen">
+              <Typewriter
+                options={{
+                  strings: ["Software Developer", "Fullstack Developer", "Cyber Security Student"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span>
           </span>
-        </span>
+        </div>
       </motion.h1>
 
       <motion.p
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.25 }}
-        className="text-base font-medium text-textDark md:max-w-[650px]"
+        className="text-base font-medium tracking-wide text-textDark md:max-w-[650px]"
       >
         I've spent the last 4 years building and scaling software for some pretty cool companies. My
         expertise spans both <span className="text-textGreen">front-end</span> and{" "}

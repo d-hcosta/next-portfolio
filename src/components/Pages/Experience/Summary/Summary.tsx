@@ -21,7 +21,7 @@ function SummaryDescriptionLi({ description }: SummaryDescriptionProp) {
       initial="hidden"
       animate={arrowControl}
       transition={{ duration: 0.5, delay: 0.25 }}
-      className="flex gap-2 text-base text-textDark"
+      className="flex gap-2 text-base tracking-wide text-textDark"
     >
       <span className="mt-l text-textGreen">
         <TiArrowForward />

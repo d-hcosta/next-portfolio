@@ -15,7 +15,7 @@ export function About() {
       <SectionTitle number="01" title="About" />
 
       <div className="flex flex-col gap-16 lgl:flex-row">
-        <div className="flex w-full flex-col gap-4 text-base font-medium text-textDark lgl:w-2/3">
+        <div className="flex w-full flex-col gap-4 text-base font-medium tracking-wide text-textDark lgl:w-2/3">
           <Reveal>
             <p>
               I'm a curious and competent full-stack software developer. I see myself as an eternal
