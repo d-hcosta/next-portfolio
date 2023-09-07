@@ -1,5 +1,5 @@
 export * from "./AsideContent/"
 export * from "./SectionTitle"
-export * from "./Navbar"
+export * from "./Navbars"
 export * from "./Pages"
 export * from "./Animations"
