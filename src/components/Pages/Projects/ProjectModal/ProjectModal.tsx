@@ -4,7 +4,6 @@ import Image from "next/image"
 import { RxOpenInNewWindow } from "react-icons/rx"
 import { AiOutlineClose } from "react-icons/ai"
 import { TbBrandGithub } from "react-icons/tb"
-import { eloRocket } from "@/assets"
 
 export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) {
   return (
