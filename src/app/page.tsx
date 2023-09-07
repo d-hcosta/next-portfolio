@@ -7,14 +7,16 @@ import {
   Contact,
   Experience,
   HeroSection,
-  Navbar,
+  Navbars,
   Projects,
 } from "@/components"
 
 export default function Home() {
   return (
     <main className="h-screen w-full overflow-x-hidden overflow-y-scroll bg-bodyColor font-bodyFont text-textLight scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/60">
-      <Navbar />
+      <div className="z-50">
+        <Navbars />
+      </div>
 
       <div className="h-[88vh] w-full items-center justify-between gap-20 xl:flex">
         <AsideLeft />
