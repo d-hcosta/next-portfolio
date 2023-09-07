@@ -10,7 +10,9 @@ export function Contact() {
         04. What's next?
       </p>
 
-      <h1 className="font-titleFont text-7xl font-black">Contact</h1>
+      <h1 className="font-titleFont text-7xl font-black">
+        Contact<span className="text-textGreen">.</span>
+      </h1>
 
       <div className="w-2/3 text-center text-base tracking-wider">
         <p>
