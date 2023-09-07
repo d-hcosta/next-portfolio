@@ -11,9 +11,9 @@ export function HeroSection() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.25 }}
-        className="z-10 flex flex-col font-titleFont lgl:text-6xl"
+        className="flex flex-col font-titleFont lgl:text-6xl"
       >
-        <span className="z-10 text-8xl font-extrabold">
+        <span className="text-8xl font-extrabold">
           Hey, I'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
         </span>
 
