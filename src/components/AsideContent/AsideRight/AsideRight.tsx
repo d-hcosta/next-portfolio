@@ -1,20 +1,30 @@
+import { LanguageModal } from "@/components"
 import { motion } from "framer-motion"
+import { useState } from "react"
+import { BsGlobeAmericas } from "react-icons/bs"
 
 export function AsideRight() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-      className="fixed bottom-0 right-0 hidden h-full w-32 xl:inline-flex"
-    >
-      <div className="flex h-full w-full flex-col items-center justify-end gap-6 text-textLight">
-        <a href="mailto:d.hcosta@proton.me">
-          <p className="w-72 rotate-90 text-sm tracking-wide text-textGreen">d.hcosta@proton.me</p>
-        </a>
+  const [isOpen, setIsOpen] = useState(true)
 
-        <span className="inline-flex h-32 w-[2px] bg-textDark"></span>
-      </div>
-    </motion.div>
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="fixed bottom-0 right-0 hidden h-full w-32 xl:inline-flex"
+      >
+        <div className="flex h-full w-full flex-col items-center justify-end gap-4 text-textLight">
+          <div className="flex flex-col gap-4">
+            <span className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-hoverColor text-xl transition-all duration-300 hover:-translate-y-2 hover:text-textGreen">
+              <BsGlobeAmericas />
+            </span>
+          </div>
+
+          <span className="inline-flex h-32 w-[2px] bg-textDark"></span>
+        </div>
+      </motion.div>
+      <LanguageModal isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
   )
 }
