@@ -31,7 +31,12 @@ export function FeaturedProject({
       >
         <div>
           <Reveal>
-            <Image className="h-full w-full object-contain" alt={projectName} src={imgSrc} />
+            <Image
+              className="h-full w-full object-contain"
+              alt={projectName}
+              src={imgSrc}
+              priority
+            />
           </Reveal>
 
           <div className="absolute left-0 top-0 h-full w-full rounded-lg bg-black/30 duration-300 group-hover:bg-transparent"></div>

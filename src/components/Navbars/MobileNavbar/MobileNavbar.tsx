@@ -1,10 +1,8 @@
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 
-import { MdOutlineClose } from "react-icons/md"
 import { BsGlobeAmericas } from "react-icons/bs"
 
-import Link from "next/link"
 import { NavbarLi } from "./NavbarLi"
 import { NavbarConstants } from "@/constants"
 

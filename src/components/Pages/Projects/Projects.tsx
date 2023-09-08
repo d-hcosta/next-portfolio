@@ -1,8 +1,7 @@
 import { useState } from "react"
-import { SectionTitle } from "@/components"
+import { SectionTitle, ProjectModal } from "@/components"
 import { FeaturedProject } from "./FeaturedProject"
 import { ProjectsConstants } from "@/constants"
-import { ProjectModal } from "./ProjectModal"
 
 export function Projects() {
   const [openedProject, setOpenedProject] = useState<ProjectProps | null>(null)
