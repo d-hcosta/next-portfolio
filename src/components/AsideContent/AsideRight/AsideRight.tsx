@@ -4,7 +4,7 @@ import { useState } from "react"
 import { BsGlobeAmericas } from "react-icons/bs"
 
 export function AsideRight() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
