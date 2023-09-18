@@ -2,11 +2,35 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { characterAbout } from "@/assets"
-import { AiFillThunderbolt } from "react-icons/ai"
 import { SectionTitle } from "@/components/SectionTitle"
-import { Reveal } from "@/components"
+import { Reveal, SlideProps, Slider } from "@/components"
+import { BackEndSkills, FrontEndSkills } from "@/constants"
 
 export function About() {
+  const settings: SlideProps = {
+    slidesPerView: 6,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      stopOnLastSlide: false,
+      pauseOnMouseEnter: false,
+    },
+    draggable: false,
+    loop: true,
+    freeMode: true,
+    breakpoints: {
+      300: {
+        slidesPerView: 3,
+        navigation: true,
+        slidesPerGroup: 1,
+      },
+      800: {
+        slidesPerView: 6,
+        slidesPerGroup: 1,
+      },
+    },
+  }
+
   return (
     <section
       id="about"
@@ -28,49 +52,17 @@ export function About() {
             <p>Here are a few technologies i work:</p>
           </Reveal>
 
-          <ul className="mt-6 grid max-w-[450px] grid-cols-2 gap-2 font-titleFont text-sm">
-            <li className="flex-items flex gap-2">
-              <span className="text-textGreen ">
-                <AiFillThunderbolt />
-              </span>
-              Javascript (ES6+)
-            </li>
+          <div className="overflow-hidden">
+            <h2 className="mb-2 text-lg font-semibold">Front-End</h2>
 
-            <li className="flex-items flex gap-2">
-              <span className="text-textGreen ">
-                <AiFillThunderbolt />
-              </span>
-              Typescrpt
-            </li>
+            <Slider settings={settings} data={FrontEndSkills} />
+          </div>
 
-            <li className="flex-items flex gap-2">
-              <span className="text-textGreen ">
-                <AiFillThunderbolt />
-              </span>
-              React
-            </li>
+          <div className="overflow-hidden">
+            <h2 className="mb-2 text-lg font-semibold">Back-End</h2>
 
-            <li className="flex-items flex gap-2">
-              <span className="text-textGreen ">
-                <AiFillThunderbolt />
-              </span>
-              Next.js
-            </li>
-
-            <li className="flex-items flex gap-2">
-              <span className="text-textGreen ">
-                <AiFillThunderbolt />
-              </span>
-              Node.js
-            </li>
-
-            <li className="flex-items flex gap-2">
-              <span className="text-textGreen ">
-                <AiFillThunderbolt />
-              </span>
-              Nest.js
-            </li>
-          </ul>
+            <Slider settings={settings} data={BackEndSkills} />
+          </div>
         </div>
 
         <motion.div
