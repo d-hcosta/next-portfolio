@@ -22,7 +22,7 @@ export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) 
 
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-3xl cursor-default overflow-hidden rounded-lg bg-[#232323] p-6 text-white shadow-xl"
+            className="relative h-full w-full max-w-3xl cursor-default overflow-hidden overflow-y-scroll rounded-lg bg-[#232323] p-6 text-white shadow-xl"
           >
             <Image src={project?.image} alt="modal-img" className="w-full" priority />
 
