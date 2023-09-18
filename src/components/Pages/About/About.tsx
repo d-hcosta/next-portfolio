@@ -1,9 +1,8 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 
+import { Reveal, SlideProps, Slider, SectionTitle } from "@/components"
 import { characterAbout } from "@/assets"
-import { SectionTitle } from "@/components/SectionTitle"
-import { Reveal, SlideProps, Slider } from "@/components"
 import { BackEndSkills, FrontEndSkills } from "@/constants"
 
 export function About() {
