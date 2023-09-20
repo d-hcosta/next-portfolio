@@ -40,7 +40,10 @@ export function DefaultNavbar() {
             ))}
           </ul>
 
-          <a href="" target="_blank">
+          <a
+            href="https://drive.google.com/file/d/1F-JNYRVBTzblqzXYBCgvxYnwjqhFfcFg/view"
+            target="_blank"
+          >
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

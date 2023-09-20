@@ -5,7 +5,7 @@ export function NavLink({ href, handleClick, name }: NavLinkProps) {
   return (
     <Link
       href={href}
-      className="nav-link flex cursor-pointer items-center gap-1 font-medium text-textGreen duration-300 hover:text-textGreen"
+      className="nav-link font-mediumduration-300 flex cursor-pointer items-center gap-1 hover:text-textGreen"
       onClick={handleClick}
     >
       <motion.li
