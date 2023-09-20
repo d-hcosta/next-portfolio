@@ -4,7 +4,7 @@ import { NavLink } from "./NavLink"
 import { NavbarConstants } from "@/constants"
 
 export function DefaultNavbar() {
-  const { languageCode } = useLanguageContext()
+  const { languageCode, translate } = useLanguageContext()
 
   function handleScroll(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.preventDefault()
@@ -50,7 +50,7 @@ export function DefaultNavbar() {
               transition={{ delay: 0.25 }}
               className="rounded-md border border-textGreen px-4 py-2 text-[13px] text-textGreen duration-300 hover:bg-hoverColor"
             >
-              Resume
+              {translate("ResumeButton")}
             </motion.button>
           </a>
         </div>

@@ -85,4 +85,8 @@ export const languages: Record<TLanguageKey, TLanguage> = {
     BR: "se você preferir uma abordagem mais ágil de comunicação.",
     EN: "if you prefer a more agile approach to communication.",
   },
+  ResumeButton: {
+    BR: "Curriculo",
+    EN: "Resume",
+  },
 }
