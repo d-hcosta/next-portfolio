@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
+import { useLanguageContext } from "@/hooks"
 import { Reveal } from "@/components"
 import Image from "next/image"
 
@@ -13,6 +14,7 @@ export function FeaturedProject({
   reverse,
   openDetailedProject,
 }: FeaturedProjectProps) {
+  const { translate } = useLanguageContext()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const techControls = useAnimation()
@@ -46,7 +48,9 @@ export function FeaturedProject({
       <div className="z-10 flex w-full flex-col items-end gap-6 text-right lgl:justify-between xl:-ml-16 xl:w-1/2">
         <div>
           <Reveal>
-            <p className="font-titleFont text-sm tracking-wide text-textGreen">Featured Project</p>
+            <p className="text-right font-titleFont text-sm tracking-wide text-textGreen">
+              {translate("ProjectsSectionSubtitle")}
+            </p>
           </Reveal>
 
           <Reveal>
@@ -92,7 +96,7 @@ export function FeaturedProject({
             className="flex cursor-pointer gap-2 font-bodyFont font-semibold text-textGreen duration-300 hover:text-textGreen/75"
             onClick={() => openDetailedProject()}
           >
-            <RxOpenInNewWindow /> See more
+            <RxOpenInNewWindow /> {translate("ProjectsSectionSeeMore")}
           </motion.div>
         </div>
       </div>

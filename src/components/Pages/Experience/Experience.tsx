@@ -1,11 +1,12 @@
 import { useState } from "react"
-import { SectionTitle } from "@/components/SectionTitle"
-import { Reveal } from "@/components"
-import { ExperiencesConstants } from "@/constants"
+import { useLanguageContext } from "@/hooks"
+import { Reveal, SectionTitle } from "@/components"
 import { Summary } from "./Summary"
+import { ExperiencesConstants } from "@/constants"
 
 export function Experience() {
   const [selectedSummary, setSelectedSummary] = useState("SignoWeb")
+  const { translate, languageCode } = useLanguageContext()
 
   const handleSummaryClick = (name: string) => {
     setSelectedSummary(name)
@@ -13,7 +14,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="mx-auto max-w-containerxs px-4 py-10 lgl:py-24">
-      <SectionTitle title="Where I have worked" number="02" />
+      <SectionTitle title={translate("ExperiencesSectionTitle")} number="02" />
 
       <div className="mt-10 flex w-full flex-col gap-16 md:flex-row">
         <ul className="flex flex-col md:w-32">
@@ -42,14 +43,19 @@ export function Experience() {
               ExperiencesConstants.find((s) => s.name === selectedSummary)?.projectName || ""
             }
             periodInTheProject={
-              ExperiencesConstants.find((s) => s.name === selectedSummary)?.periodInTheProject || ""
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.periodInTheProject[
+                languageCode
+              ] || ""
             }
             arrayOfDescriptions={
-              ExperiencesConstants.find((s) => s.name === selectedSummary)?.arrayOfDescriptions ||
-              []
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.arrayOfDescriptions[
+                languageCode
+              ] || []
             }
             positionHeld={
-              ExperiencesConstants.find((s) => s.name === selectedSummary)?.positionHeld || ""
+              ExperiencesConstants.find((s) => s.name === selectedSummary)?.positionHeld[
+                languageCode
+              ] || ""
             }
           />
         )}

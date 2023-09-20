@@ -23,7 +23,10 @@ export function Skills({ name, icon }: SkillsProps) {
       ref={ref}
       className="flex h-20 w-24 items-center justify-center rounded-lg bg-[#232323] text-textGreen hover:text-textGreen/80"
     >
-      <IconComponent className="h-14 w-14" />
+      <IconComponent
+        title={name}
+        className="h-14 w-14 transition-transform duration-300 hover:-translate-x-1 hover:-translate-y-1"
+      />
     </motion.div>
   )
 }

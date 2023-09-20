@@ -1,7 +1,11 @@
+import { languages } from "@/constants"
+import { useLanguageContext } from "@/hooks"
 import { motion } from "framer-motion"
 import Typewriter from "typewriter-effect"
 
 export function HeroSection() {
+  const { translate, languageCode } = useLanguageContext()
+
   return (
     <section
       id="home"
@@ -14,16 +18,20 @@ export function HeroSection() {
         className="flex flex-col font-titleFont lgl:text-6xl"
       >
         <span className="text-8xl font-extrabold">
-          Hey, I'm Diego<span className="text-8xl font-extrabold text-textGreen">.</span>
+          {translate("HeroSectionTitle")}
+          <span className="text-8xl font-extrabold text-textGreen">.</span>
         </span>
 
         <div className="flex items-center justify-center">
           <span className="mt-2 inline-flex items-center gap-3 text-4xl font-medium text-textLight/80 lgl:mt-4">
-            <p>I'm a</p>
+            <p> {translate("HeroSectionSubtitle")}</p>
             <span className="font-semibold text-textGreen">
               <Typewriter
                 options={{
-                  strings: ["Software Developer", "Fullstack Developer", "Cyber Security Student"],
+                  strings:
+                    languageCode === "BR"
+                      ? languages.HeroSectionStacks.BR
+                      : languages.HeroSectionStacks.EN,
                   autoStart: true,
                   loop: true,
                 }}
@@ -39,13 +47,7 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.25 }}
         className="text-base font-medium tracking-wide text-textDark md:max-w-[650px]"
       >
-        I've spent the last 4 years building and scaling software for some pretty cool companies. My
-        expertise spans both <span className="text-textGreen">front-end</span> and{" "}
-        <span className="text-textGreen">back-end</span> development, underpinned by a robust
-        foundation. Presently, I am immersing myself in the realm of{" "}
-        <span className="text-textGreen">Python</span> and{" "}
-        <span className="text-textGreen">Ruby</span> programming languages, further enriching my
-        skill set.
+        {translate("HeroSectionDescription")}
       </motion.p>
 
       <motion.button

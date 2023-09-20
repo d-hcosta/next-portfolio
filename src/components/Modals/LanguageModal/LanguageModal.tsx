@@ -1,9 +1,12 @@
 import { brazilSvg, usaSvg } from "@/assets"
+import { useLanguageContext } from "@/hooks"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { AiOutlineClose } from "react-icons/ai"
 
 export function LanguageModal({ isOpen, setIsOpen }: LanguageModalProps) {
+  const { handleChangeLanguage } = useLanguageContext()
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -23,11 +26,23 @@ export function LanguageModal({ isOpen, setIsOpen }: LanguageModalProps) {
             className="relative w-full max-w-sm cursor-default overflow-hidden rounded-lg bg-[#232323] p-6 text-white shadow-xl"
           >
             <ul className="flex gap-8">
-              <li className="cursor-pointer">
+              <li
+                className="cursor-pointer"
+                onClick={() => {
+                  setIsOpen(false)
+                  handleChangeLanguage("BR")
+                }}
+              >
                 <Image src={brazilSvg} alt="brazilFlag" />
               </li>
 
-              <li className="cursor-pointer">
+              <li
+                className="cursor-pointer"
+                onClick={() => {
+                  setIsOpen(false)
+                  handleChangeLanguage("EN")
+                }}
+              >
                 <Image src={usaSvg} alt="usaFlag" />
               </li>
             </ul>

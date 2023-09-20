@@ -1,7 +1,10 @@
+import { useLanguageContext } from "@/hooks"
 import { Reveal } from "@/components"
 import { MdEmail } from "react-icons/md"
 
 export function Contact() {
+  const { translate } = useLanguageContext()
+
   return (
     <section
       id="contact"
@@ -9,27 +12,27 @@ export function Contact() {
     >
       <Reveal>
         <p className="txt-lg flex items-center font-titleFont font-semibold tracking-wide text-textGreen">
-          04. What's next?
+          04. {translate("ContactSectionTitle")}
         </p>
       </Reveal>
 
       <Reveal>
         <h1 className="font-titleFont text-7xl font-black">
-          Contact<span className="text-textGreen">.</span>
+          {translate("ContactSectionSubtitle")}
+          <span className="text-textGreen">.</span>
         </h1>
       </Reveal>
 
       <div className="w-2/3 text-center text-base tracking-wider">
         <Reveal>
           <p>
-            Please feel free to contact me via email if you would like to establish a connection.
-            Also, I'm available on{" "}
+            {translate("ContactSectionDescription")}&nbsp;
             <span className="text-textGreen">
               <a href="https://www.linkedin.com/in/diegohoc/" target="_blank">
                 LinkedIn
               </a>
             </span>{" "}
-            if you prefer a more agile approach to communication.
+            {translate("ContactSectionEndDescription")}
           </p>
         </Reveal>
 
