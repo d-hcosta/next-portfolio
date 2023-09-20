@@ -18,8 +18,6 @@ You can fork this repo to modify and make changes of your own.
 
 ## Built With
 
-My personal portfolio <a href="https://dcosta.vercel.app/" target="_blank">dcosta.vercel.app</a> which features some of my projects as well as my resume and technical skills.<br/>
-
 This project was built using these technologies.
 
 - Next.js
