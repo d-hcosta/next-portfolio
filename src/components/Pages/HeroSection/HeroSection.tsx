@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="mx-auto flex max-w-contentContainer flex-col items-center gap-4 py-10 mdl:px-10 mdl:pt-56 lgl:gap-8 xl:px-4 "
+      className="mx-auto flex max-w-contentContainer flex-col items-center gap-4 py-10 mdl:px-10 mdl:pt-56 lgl:gap-8 xl:px-4"
     >
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
@@ -17,7 +17,7 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.25 }}
         className="flex flex-col font-titleFont lgl:text-6xl"
       >
-        <span className="text-8xl font-extrabold">
+        <span className={`${languageCode === "BR" ? "text-7xl" : "text-8xl"} font-extrabold`}>
           {translate("HeroSectionTitle")}
           <span className="text-8xl font-extrabold text-textGreen">.</span>
         </span>
