@@ -3,7 +3,6 @@
   <a href="https://dcosta.vercel.app/" target="_blank">dcosta.vercel.app</a>
 </h2>
 
-
 <br/>
 
 <h3 align="center">
