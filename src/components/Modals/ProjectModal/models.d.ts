@@ -14,8 +14,8 @@ interface ProjectProps {
   techArray: string[]
   reverse: boolean
   completeDescription?: CompleteDescription
-  githubLink?: string | boolean
-  liveLink?: string | boolean
+  githubLink?: string
+  liveLink?: string
 }
 
 type CompleteDescription = {

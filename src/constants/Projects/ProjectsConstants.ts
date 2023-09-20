@@ -21,7 +21,7 @@ export const ProjectsConstants = [
         "I have adopted strict measures to guarantee the security of user data, implementing advanced data protection and encryption protocols, guaranteeing the confidentiality and integrity of information.",
       ],
     },
-    githubLink: false,
+    githubLink: "",
     liveLink: "https://www.elorocket.com/",
     reverse: false,
   },
