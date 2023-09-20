@@ -1,7 +1,9 @@
 type LanguageContextProps = {
   languageCode: keyof TLanguage
-  translate: (key: TLanguageKey) => string
+  translate: (key: TLanguageKey) => string | ReactNode
   handleChangeLanguage: (language: keyof TLanguage) => void
+  handleOpenLanguageModal: () => void
+  isLanguageModalOpen: boolean
 }
 
 type LanguageProviderProps = {
@@ -9,8 +11,8 @@ type LanguageProviderProps = {
 }
 
 type TLanguage = {
-  BR: string
-  EN: string
+  BR: string | string[]
+  EN: string | string[]
 }
 
 type TLanguageKey = string

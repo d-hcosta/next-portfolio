@@ -7,8 +7,17 @@ interface ProjectModalProps {
 interface ProjectProps {
   image: StaticImageData
   name: string
-  shortDescription: string
+  shortDescription: {
+    BR: string
+    EN: string
+  }
   techArray: string[]
   reverse: boolean
-  completeDescription?: string[]
+  completeDescription?: CompleteDescription
+  githubLink?: string | boolean
+  liveLink?: string | boolean
+}
+
+type CompleteDescription = {
+  [key: string]: string[]
 }
