@@ -1,10 +1,9 @@
-import { LanguageModal } from "@/components"
+import { useLanguageContext } from "@/hooks"
 import { motion } from "framer-motion"
-import { useState } from "react"
 import { BsGlobeAmericas } from "react-icons/bs"
 
 export function AsideRight() {
-  const [isOpen, setIsOpen] = useState(false)
+  const { handleOpenLanguageModal } = useLanguageContext()
 
   return (
     <>
@@ -16,7 +15,10 @@ export function AsideRight() {
       >
         <div className="flex h-full w-full flex-col items-center justify-end gap-4 text-textLight">
           <div className="flex flex-col gap-4">
-            <span className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-hoverColor text-xl transition-all duration-300 hover:-translate-y-2 hover:text-textGreen">
+            <span
+              onClick={handleOpenLanguageModal}
+              className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-hoverColor text-xl transition-all duration-300 hover:-translate-y-2 hover:text-textGreen"
+            >
               <BsGlobeAmericas />
             </span>
           </div>
@@ -24,7 +26,6 @@ export function AsideRight() {
           <span className="inline-flex h-32 w-[2px] bg-textDark"></span>
         </div>
       </motion.div>
-      <LanguageModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   )
 }
