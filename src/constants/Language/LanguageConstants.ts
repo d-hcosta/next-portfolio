@@ -26,7 +26,7 @@ export const languages: Record<TLanguageKey, TLanguage> = {
     EN: ["Software Developer", "Fullstack Developer", "Cyber Security Student"],
   },
   HeroSectionDescription: {
-    BR: "Passei os últimos 4 anos construindo e escalando software's para algumas empresas excelentes. Minha experiência abrange o desenvolvimento {{front-end}} e {{back-end}}, sustentado por uma base sólida. Atualmente, estou mergulhando no domínio das linguagens de programação {{Python}} e {{Ruby}}, enriquecendo ainda mais meu conjunto de skills.",
+    BR: "Passei os últimos 4 anos construindo e escalando software's para algumas empresas excelentes. Minha experiência abrange o desenvolvimento {{front-end}} e {{back-end}}, sustentado por uma base sólida. Atualmente, estou mergulhando no domínio das linguagens de programação {{Python}} e {{Rust}}, enriquecendo ainda mais meu conjunto de skills.",
     EN: "I've spent the last 4 years building and scaling software for some pretty cool companies. My expertise spans both {{front-end}} and {{back-end}} development, underpinned by a robust foundation. Presently, I am immersing myself in the realm of {{Python}} and {{Ruby}} programming languages, further enriching my skill set.",
   },
   AboutSectionTitle: {

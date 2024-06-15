@@ -1,10 +1,12 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-import { Reveal, SlideProps, Slider, SectionTitle } from "@/components"
+import { Reveal,SectionTitle } from "@/components"
 import { characterAbout } from "@/assets"
 import { BackEndSkills, FrontEndSkills } from "@/constants"
 import { useLanguageContext } from "@/hooks"
+import { Skills } from "./Skills"
+import { SlideProps } from "./models"
 
 export function About() {
   const { translate } = useLanguageContext()
@@ -51,15 +53,11 @@ export function About() {
           </Reveal>
 
           <div className="overflow-hidden">
-            <h2 className="mb-2 text-lg font-semibold">Front-End</h2>
-
-            <Slider settings={settings} data={FrontEndSkills} />
+            <Skills data={FrontEndSkills} settings={settings} title="Front-End" />
           </div>
 
           <div className="overflow-hidden">
-            <h2 className="mb-2 text-lg font-semibold">Back-End</h2>
-
-            <Slider settings={settings} data={BackEndSkills} />
+            <Skills data={BackEndSkills} settings={settings} title="Back-End" />
           </div>
         </div>
 
