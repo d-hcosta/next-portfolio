@@ -41,6 +41,10 @@ export const languages: Record<TLanguageKey, TLanguage> = {
     BR: "Aqui estão algumas tecnologias que eu trabalho:",
     EN: "Here are a few technologies i work:",
   },
+  AboutSectionOtherTech: {
+    BR: "Outros",
+    EN: "Others",
+  },
   ExperiencesSectionTitle: {
     BR: "Onde eu trabalhei",
     EN: "Where I have worked",

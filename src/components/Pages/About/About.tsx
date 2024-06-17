@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 import { Reveal,SectionTitle } from "@/components"
 import { characterAbout } from "@/assets"
-import { BackEndSkills, FrontEndSkills } from "@/constants"
+import { BackEndSkills, FrontEndSkills, OtherSkills } from "@/constants"
 import { useLanguageContext } from "@/hooks"
 import { Skills } from "./Skills"
 import { SlideProps } from "./models"
@@ -20,7 +20,7 @@ export function About() {
       pauseOnMouseEnter: false,
     },
     draggable: false,
-    loop: true,
+    loop: false,
     freeMode: true,
     breakpoints: {
       300: {
@@ -58,6 +58,10 @@ export function About() {
 
           <div className="overflow-hidden">
             <Skills data={BackEndSkills} settings={settings} title="Back-End" />
+          </div>
+
+          <div className="overflow-hidden">
+            <Skills data={OtherSkills} settings={settings} title={translate("AboutSectionOtherTech")} />
           </div>
         </div>
 
