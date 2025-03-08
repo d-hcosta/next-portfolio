@@ -29,14 +29,14 @@ export const ExperiencesConstants = [
     projectUrl: "https://www.elorocket.com/",
     projectName: "EloRocket",
     periodInTheProject: {
-      BR: "13 de maio de 2022 - 2 de agosto de 2023",
-      EN: "May 13, 2022 - August 2, 2023",
+      BR: "13 de maio de 2022 - 2 de outubro de 2023",
+      EN: "May 13, 2022 - October 2, 2023",
     },
     arrayOfDescriptions: {
       BR: [
         "Participação ativa na arquitetura de software e construção de todo o fluxo",
         "Desenvolvimento de sistemas altamente funcionais e adaptáveis para atender às necessidades da empresa.",
-        "Desenvolvimento de painel administrativa completa para gestão de e-commerce utilizando React, Typescript, Node e PostgreSQL",
+        "Desenvolvimento de painel administrativo completa para gestão de e-commerce utilizando React, Typescript, Node e PostgreSQL",
       ],
       EN: [
         "Active participation in the software architecture and construction of the entire flow",

@@ -1,6 +1,48 @@
-import { eloRocket, pomodoro, portfolioV1 } from "@/assets"
+import { eloRocket, pomodoro, portfolioV1, toniello } from "@/assets"
 
 export const ProjectsConstants = [
+  {
+    image: toniello,
+    name: "Toniello Chat",
+    shortDescription: {
+      BR: "Um software de chat empresarial moderno e seguro, utilizando Next.js no front-end e NestJS no back-end para maximizar desempenho e escalabilidade.",
+      EN: "An enterprise-grade chat software using modern technologies, built with Next.js for the front-end and NestJS for the back-end to maximize performance and scale.",
+    },
+    completeDescription: {
+      BR: [
+        "Integração LDAP: Autenticação de usuários utilizando Microsoft Active Directory para login seguro e gerenciamento de acessos.",
+        "Comunicação em tempo real: Desenvolvido com Socket.IO para fornecer mensagens instantâneas e atualizações de status entre usuários.",
+        "Implantação e DevOps: Uso de Docker para ambientes de desenvolvimento e produção, garantindo segurança adicional ao ser implantado em uma rede interna protegida por VPN.",
+        "Segurança avançada: Gerenciamento de sessão utilizando JWT integrado ao LDAP para controle de autenticação.",
+        "Uploads de arquivos: Implementação de manipulação de arquivos utilizando AWS S3 para um armazenamento confiável e escalável.",
+        "Canais baseados em departamentos: Funcionalidade que permite aos usuários conversarem em canais específicos de departamentos e mensagens privadas para uma comunicação mais segmentada.",
+        "Painel administrativo: Implementação de um painel de controle para gestão de usuários e departamentos, supervisão de chats e monitoramento da atividade dos usuários para melhor administração.",
+      ],
+      EN: [
+        "LDAP Integration: Used LDAP to authenticate users against Microsoft Active Directory for secure login and management.",
+        "Real-time Communication: Developed with Socket.IO to provide instant messaging and status updates between users.",
+        "Deployment and DevOps: Used Docker files for both dev and prod, and with an added layer of enterprise security by deploying on a VPN-secured internal network.",
+        "Advanced Security: Session management utilizing JWT strategy integrated with LDAP token management.",
+        "File Uploads: Implemented file handling with AWS S3 integration for reliable and scalable file storage.",
+        "Department-based Channels: Included a feature that allows users to chat in department-specific channels and private messages for tailored communication.",
+        "Admin Dashboard: Implemented a dashboard for user and department management, chat oversight, and monitoring user activity for improved administrative control.",
+      ],
+    },
+    techArray: [
+      "Next.js",
+      "NestJS",
+      "Tailwind",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "Amazon S3",
+      "Microsoft LDAP",
+    ],
+    githubLink: false,
+    liveLink: false,
+    showFooter: false,
+    reverse: true,
+  },
   {
     image: eloRocket,
     name: "EloRocket",
@@ -21,8 +63,9 @@ export const ProjectsConstants = [
         "I have adopted strict measures to guarantee the security of user data, implementing advanced data protection and encryption protocols, guaranteeing the confidentiality and integrity of information.",
       ],
     },
-    githubLink: "",
+    githubLink: false,
     liveLink: "https://www.elorocket.com/",
+    showFooter: true,
     reverse: false,
   },
   {
@@ -48,6 +91,7 @@ export const ProjectsConstants = [
     },
     githubLink: "https://github.com/d-hcosta/react-portfolio",
     liveLink: "https://dhcosta.vercel.app/",
+    showFooter: true,
   },
   {
     image: pomodoro,
@@ -72,5 +116,6 @@ export const ProjectsConstants = [
     },
     githubLink: "https://github.com/d-hcosta/pomodoro-react",
     liveLink: "https://vrag-pomodoro.vercel.app/",
+    showFooter: true,
   },
 ]

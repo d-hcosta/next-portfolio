@@ -41,7 +41,7 @@ export function DefaultNavbar() {
           </ul>
 
           <a
-            href="https://drive.google.com/file/d/1F-JNYRVBTzblqzXYBCgvxYnwjqhFfcFg/view"
+            href="https://drive.google.com/file/d/1cUvuMYLZP1DVLh_jpY3PLZTn0kKEpdhJ/view?usp=sharing"
             target="_blank"
           >
             <motion.button

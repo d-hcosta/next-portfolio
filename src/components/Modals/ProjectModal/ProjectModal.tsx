@@ -43,40 +43,44 @@ export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) 
                   ))}
               </div>
 
-              <div className="mt-9">
-                <p className="mb-3 font-titleFont text-2xl font-extrabold">
-                  {translate("ProjectsSectionModalFooterSubtitle")}
-                  <span className="text-textGreen">.</span>
-                </p>
+              {project?.showFooter && (
+                <div className="mt-9">
+                  <p className="mb-3 font-titleFont text-2xl font-extrabold">
+                    {translate("ProjectsSectionModalFooterSubtitle")}
+                    <span className="text-textGreen">.</span>
+                  </p>
 
-                <div className="flex justify-between">
-                  <div>
-                    <a
-                      href={project?.githubLink}
-                      target="_blank"
-                      className={`flex items-center gap-1 ${
-                        project?.githubLink
-                          ? "text-textGreen"
-                          : "cursor-not-allowed text-textGreen/50"
-                      }`}
-                    >
-                      <TbBrandGithub />
-                      <p>{translate("ProjectsSectionModalSourceCode")}</p>
-                    </a>
-                  </div>
+                  <div className="flex justify-between">
+                    <div>
+                      <button disabled>
+                        <a
+                          href={project?.githubLink}
+                          target="_blank"
+                          className={`flex items-center gap-1 ${
+                            project?.githubLink
+                              ? "text-textGreen"
+                              : "cursor-not-allowed text-textGreen/50"
+                          }`}
+                        >
+                          <TbBrandGithub />
+                          <p>{translate("ProjectsSectionModalSourceCode")}</p>
+                        </a>
+                      </button>
+                    </div>
 
-                  <div>
-                    <a
-                      href={project?.liveLink}
-                      target="_blank"
-                      className="flex items-center gap-1 text-textGreen"
-                    >
-                      <RxOpenInNewWindow />
-                      <p>{translate("ProjectsSectionModalLiveProject")}</p>
-                    </a>
+                    <div>
+                      <a
+                        href={project?.liveLink}
+                        target="_blank"
+                        className="flex items-center gap-1 text-textGreen"
+                      >
+                        <RxOpenInNewWindow />
+                        <p>{translate("ProjectsSectionModalLiveProject")}</p>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </motion.div>
         </motion.div>
