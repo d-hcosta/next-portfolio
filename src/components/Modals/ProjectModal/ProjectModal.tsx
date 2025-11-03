@@ -9,6 +9,13 @@ import { TbBrandGithub } from "react-icons/tb"
 export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) {
   const { translate, languageCode } = useLanguageContext()
 
+  const projectGithubLink = project?.githubLink
+  const projectLiveLink = project?.liveLink
+
+  const githubLink = typeof projectGithubLink === "string" ? projectGithubLink : undefined
+  const liveLink = typeof projectLiveLink === "string" ? projectLiveLink : undefined
+  const hasGithubLink = Boolean(githubLink)
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -52,12 +59,12 @@ export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) 
 
                   <div className="flex justify-between">
                     <div>
-                      <button disabled>
+                      <button disabled={!hasGithubLink}>
                         <a
-                          href={project?.githubLink}
+                          href={githubLink}
                           target="_blank"
                           className={`flex items-center gap-1 ${
-                            project?.githubLink
+                            hasGithubLink
                               ? "text-textGreen"
                               : "cursor-not-allowed text-textGreen/50"
                           }`}
@@ -70,7 +77,7 @@ export function ProjectModal({ isOpen, setIsOpen, project }: ProjectModalProps) 
 
                     <div>
                       <a
-                        href={project?.liveLink}
+                        href={liveLink}
                         target="_blank"
                         className="flex items-center gap-1 text-textGreen"
                       >
