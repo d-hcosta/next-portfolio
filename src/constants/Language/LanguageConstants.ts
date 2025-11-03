@@ -15,51 +15,55 @@ export const Locales: {
 export const languages: Record<TLanguageKey, TLanguage> = {
   HeroSectionTitle: {
     BR: "Olá, me chamo Diego",
-    EN: "Hey, I'm Diego",
+    EN: "Hello, I'm Diego Costa",
   },
   HeroSectionSubtitle: {
-    BR: "Eu sou um",
+    BR: "Eu atuo como",
     EN: "I'm a",
   },
   HeroSectionStacks: {
-    BR: ["Desenvolvedor de Software", "Desenvolvedor Fullstack", "Estudante de Cyber Segurança"],
-    EN: ["Software Developer", "Fullstack Developer", "Cyber Security Student"],
+    BR: [
+      "Desenvolvedor de Software",
+      "Desenvolvedor Fullstack",
+      "Entusiasta de Segurança Cibernética",
+    ],
+    EN: ["Software Developer", "Fullstack Developer", "Cybersecurity Enthusiast"],
   },
   HeroSectionDescription: {
-    BR: "Passei os últimos 4 anos construindo e escalando software's para algumas empresas excelentes. Minha experiência abrange o desenvolvimento {{front-end}} e {{back-end}}, sustentado por uma base sólida. Atualmente, estou mergulhando no domínio das linguagens de programação {{Python}} e {{Rust}}, enriquecendo ainda mais meu conjunto de skills.",
-    EN: "I've spent the last 4 years building and scaling software for some pretty cool companies. My expertise spans both {{front-end}} and {{back-end}} development, underpinned by a robust foundation. Presently, I am immersing myself in the realm of {{Python}} and {{Ruby}} programming languages, further enriching my skill set.",
+    BR: "Ao longo dos últimos 5 anos, tenho projetado e escalado produtos digitais para empresas de diferentes segmentos. Atuo em {{front-end}} e {{back-end}} com foco em qualidade técnica, governança de código e experiência do usuário. Recentemente, tenho aprofundado estudos em {{Python}} e {{Rust}} para ampliar minha atuação em plataformas de alta performance.",
+    EN: "Over the past five years I've been designing and scaling digital products for companies across multiple industries. I work across {{front-end}} and {{back-end}} initiatives with a strong focus on technical quality, code governance, and user experience. Recently I've been expanding my knowledge in {{Python}} and {{Rust}} to support high-performance platforms.",
   },
   AboutSectionTitle: {
     BR: "Sobre",
     EN: "About",
   },
   AboutSectionDescription: {
-    BR: "Sou um desenvolvedor de software full-stack curioso e competente. Vejo-me como um eterno aprendiz, motivado para resolver problemas complexos. Programar para mim é uma forma de encontrar paz em meio ao caos.",
-    EN: "I'm a curious and competent full-stack software developer. I see myself as an eternal learner, motivated to solve complex problems. Programming for me is a way to find peace in the midst of chaos.",
+    BR: "Sou um desenvolvedor full-stack orientado a resultados, apaixonado por transformar desafios de negócio em soluções robustas e mensuráveis. Valorizo processos colaborativos, comunicação transparente e melhoria contínua.",
+    EN: "I'm a results-driven full-stack developer who loves turning business challenges into reliable, measurable solutions. I value collaborative processes, transparent communication, and continuous improvement.",
   },
   AboutSectionStacksSubtitle: {
-    BR: "Aqui estão algumas tecnologias que eu trabalho:",
-    EN: "Here are a few technologies i work:",
+    BR: "Algumas das tecnologias com as quais mais tenho trabalhado:",
+    EN: "A selection of the technologies I work with most frequently:",
   },
   AboutSectionOtherTech: {
-    BR: "Outros",
-    EN: "Others",
+    BR: "Ferramentas complementares",
+    EN: "Complementary tooling",
   },
   ExperiencesSectionTitle: {
-    BR: "Onde eu trabalhei",
-    EN: "Where I have worked",
+    BR: "Experiências profissionais",
+    EN: "Professional experience",
   },
   ProjectsSectionTitle: {
-    BR: "Algumas coisas que construi",
-    EN: "Some things I built",
+    BR: "Projetos em destaque",
+    EN: "Featured projects",
   },
   ProjectsSectionSeeMore: {
     BR: "Ver mais",
     EN: "See More",
   },
   ProjectsSectionSubtitle: {
-    BR: "Projeto em destaque",
-    EN: "Featured Project",
+    BR: "Case de destaque",
+    EN: "Highlight case study",
   },
   ProjectsSectionModalFooterSubtitle: {
     BR: "Links do projeto",
@@ -70,24 +74,24 @@ export const languages: Record<TLanguageKey, TLanguage> = {
     EN: "Source Code",
   },
   ProjectsSectionModalLiveProject: {
-    BR: "Site do Projeto",
-    EN: "Live Project",
+    BR: "Projeto em produção",
+    EN: "Live project",
   },
   ContactSectionTitle: {
-    BR: "E agora?",
-    EN: "What's next?",
+    BR: "Vamos conversar?",
+    EN: "Ready to talk?",
   },
   ContactSectionSubtitle: {
     BR: "Contato",
     EN: "Contact",
   },
   ContactSectionDescription: {
-    BR: "Fique à vontade para entrar em contato comigo por e-mail se desejar estabelecer uma conexão. Além disso, estou disponível em",
-    EN: "Please feel free to contact me via email if you would like to establish a connection. Also, I'm available on",
+    BR: "Estou disponível para novas conversas sobre oportunidades, consultoria técnica ou projetos desafiadores. Você pode me enviar um e-mail diretamente ou conectar-se comigo também pelo",
+    EN: "I'm available to discuss new opportunities, technical consulting, or challenging projects. Feel free to email me directly or reach out as well on",
   },
   ContactSectionEndDescription: {
-    BR: "se você preferir uma abordagem mais ágil de comunicação.",
-    EN: "if you prefer a more agile approach to communication.",
+    BR: "caso prefira uma conversa rápida e objetiva.",
+    EN: "if you prefer a quick and direct conversation.",
   },
   ResumeButton: {
     BR: "Curriculo",

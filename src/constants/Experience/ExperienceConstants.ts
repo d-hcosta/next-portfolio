@@ -1,27 +1,27 @@
 export const ExperiencesConstants = [
   {
-    name: "SignoWeb",
-    projectUrl: "https://site.signoweb.com.br/",
-    projectName: "SignoWeb",
+    name: "Toniello",
+    projectUrl: "",
+    projectName: "Toniello Chat",
     periodInTheProject: {
-      BR: "6 de julho de 2022 - 10 de outubro de 2022",
-      EN: "July 6, 2022 - October 10, 2022",
+      BR: "10 de outubro de 2024 - Presente",
+      EN: "Oct 10, 2024 - Present",
     },
     arrayOfDescriptions: {
       BR: [
-        "Melhoria contínua de sistemas com a implementação de novas funcionalidades e correção de bugs.",
-        "Manutenção em projetos existentes e desenvolvimento de aplicações monolíticas usando a MERN Stack.",
-        "Implementação de novas funcionalidades e manutenção em sistemas diversificados.",
+        "Cofundei e lancei uma plataforma SaaS de mensagens corporativas com foco em governança, segurança e aderência regulatória.",
+        "Estruturei arquitetura fullstack com Next.js e NestJS, Socket, integrando LDAP, AWS S3 e Redis para suportar uso simultâneo em larga escala.",
+        "Orquestro roadmap contínuo, acompanhando métricas de adoção, priorizando feedback de clientes e garantindo SLOs de disponibilidade.",
       ],
       EN: [
-        "Continuous improvement of existing systems with the implementation of new features and bug fixes.",
-        "Maintenance on existing projects and monolithic application development using the MERN Stack.",
-        "Implementation of new functionalities and maintenance in diversified systems.",
+        "Co-founded and launched a SaaS corporate messaging platform focused on governance, security, and regulatory compliance.",
+        "Designed a fullstack architecture with Next.js and NestJS, Socket, integrating LDAP, AWS S3, and Redis to support large-scale concurrent usage.",
+        "Own the continuous roadmap, tracking adoption metrics, prioritizing client feedback, and upholding availability SLOs.",
       ],
     },
     positionHeld: {
-      BR: "Desenvolvedor Fullstack",
-      EN: "Fullstack Developer",
+      BR: "Cofundador & Engenheiro de Software",
+      EN: "Co-founder & Software Engineer",
     },
   },
   {
@@ -34,14 +34,14 @@ export const ExperiencesConstants = [
     },
     arrayOfDescriptions: {
       BR: [
-        "Participação ativa na arquitetura de software e construção de todo o fluxo",
-        "Desenvolvimento de sistemas altamente funcionais e adaptáveis para atender às necessidades da empresa.",
-        "Desenvolvimento de painel administrativo completa para gestão de e-commerce utilizando React, Typescript, Node e PostgreSQL",
+        "Liderei decisões de arquitetura e desenho de fluxos críticos para o produto, garantindo escalabilidade e observabilidade.",
+        "Desenvolvi módulos de e-commerce responsivos, automações de pagamento e ferramentas de suporte ao time de operações.",
+        "Projetei e implementei um painel administrativo completo com React, TypeScript, Node e PostgreSQL, reduzindo o tempo de gestão diária.",
       ],
       EN: [
-        "Active participation in the software architecture and construction of the entire flow",
-        "Development of highly functional and adaptable systems to meet the needs of the company.",
-        "Development of a complete administrative dashboard for e-commerce management using React, Typescript, Node and PostgreSQL",
+        "Led architectural decisions and designed critical product flows, ensuring scalability and observability.",
+        "Developed responsive e-commerce modules, payment automations, and tooling that empowered the operations team.",
+        "Designed and implemented a comprehensive admin dashboard with React, TypeScript, Node, and PostgreSQL, reducing daily management effort.",
       ],
     },
     positionHeld: {
@@ -50,8 +50,33 @@ export const ExperiencesConstants = [
     },
   },
   {
+    name: "SignoWeb",
+    projectUrl: "https://site.signoweb.com.br/",
+    projectName: "SignoWeb",
+    periodInTheProject: {
+      BR: "6 de julho de 2022 - 10 de outubro de 2022",
+      EN: "July 6, 2022 - October 10, 2022",
+    },
+    arrayOfDescriptions: {
+      BR: [
+        "Conduzi melhorias evolutivas em sistemas legados, entregando novas funcionalidades e resolvendo bugs críticos com foco em estabilidade.",
+        "Implementei integrações MERN de ponta a ponta, desenvolvendo APIs e interfaces responsivas alinhadas aos requisitos de negócio.",
+        "Atuei de forma colaborativa com designers e analistas para priorizar demandas, garantindo entregas frequentes e documentadas.",
+      ],
+      EN: [
+        "Drove evolutionary improvements to legacy systems, delivering new features and resolving critical bugs with a focus on stability.",
+        "Implemented end-to-end MERN integrations, building APIs and responsive interfaces aligned with business requirements.",
+        "Collaborated closely with designers and analysts to prioritize initiatives, ensuring frequent and well-documented releases.",
+      ],
+    },
+    positionHeld: {
+      BR: "Desenvolvedor Fullstack",
+      EN: "Fullstack Developer",
+    },
+  },
+  {
     name: "Freelancer",
-    projectUrl: "#",
+    projectUrl: "",
     projectName: "Freelancer",
     periodInTheProject: {
       BR: "23 de maio de 2022 - Presente",
@@ -59,14 +84,14 @@ export const ExperiencesConstants = [
     },
     arrayOfDescriptions: {
       BR: [
-        "Desenvolvimento bem-sucedido de e-commerce's e landing pages em React com Styled Components/Tailwind.",
-        "Fortalecimento em habilidades que envolvem desenvolvimento ágil de software e fullstack stacks.",
-        "Estudo em machine learning com Python e desenvolvimento com Ruby on Rails.",
+        "Entreguei lojas virtuais e landing pages de alta conversão utilizando React, Tailwind CSS e Styled Components.",
+        "Apoiei clientes desde a descoberta até a publicação, estruturando rotinas ágeis, estimativas e documentação funcional.",
+        "Mantive estudos contínuos em Python, Ruby on Rails e fundamentos de machine learning para ampliar a oferta de serviços.",
       ],
       EN: [
-        "Successful development of e-commerce and landing pages in React with Styled Components/Tailwind.",
-        "Strengthening skills in agile software development and fullstack.",
-        "Studying machine learning with Python and development with Ruby on Rails.",
+        "Delivered high-converting e-commerce stores and landing pages using React, Tailwind CSS, and Styled Components.",
+        "Supported clients from discovery to launch by structuring agile routines, estimates, and functional documentation.",
+        "Pursued ongoing studies in Python, Ruby on Rails, and machine-learning fundamentals to broaden service offerings.",
       ],
     },
     positionHeld: {
